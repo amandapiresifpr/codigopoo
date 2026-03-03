@@ -30,3 +30,7 @@ print("Você acertou o valor!")
 
 for i in range(1, 10 + 1):
     print(i)
+
+#EXERCICIO 4 - VETORES
+numeros  = [0] * 10
+
