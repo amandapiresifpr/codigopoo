@@ -1,0 +1,13 @@
+from classes import Animal, Gato, Cachorro
+melody = Cachorro("Melody", "Shitzu", 4)
+melody.abanar_rabo()
+melody.respirar()
+melody.rugir()
+print(f"Minha cachorrinha é a {melody.nome}") 
+
+print("---------------------------------")
+
+garfield = Gato("Garfield", "Persa", 4)
+garfield.respirar()
+garfield.ronronar()
+garfield.rugir()
