@@ -55,7 +55,21 @@ class Jogadora(arcade.Sprite):
 class Strawberry(arcade.Sprite):
      def __init__(self):
           super().__init__("strawberry.png", scale = 0.8)
+          
+     def update(self, delta_time):
+          self.center_x += self.change_x
+          self.center_y += self.change_y
+          
+           # Fazer parar nas bordas da janela
+          if (self.right > LARGURA or self.left < 0):
+               self.change_x *= -1
 
+          if (self.top > ALTURA or self.bottom < 0):
+               self.change_y  *= -1
+
+class Strawberry_estragado(arcade.Sprite):
+     def __init__(self):
+          super().__init__("strawberry_estragado.png", scale = 0.8)
           
      def update(self, delta_time):
           self.center_x += self.change_x
@@ -147,6 +161,29 @@ class JanelaJogo(arcade.Window):
 
               self.sprite_strawberry.append(self.strawberry_simples)
          
+          #Inimigo
+         self.sprite_inimigos = arcade.SpriteList()
+         self.inimigo = Inimigo()
+
+         self.inimigo.center_x = 150
+         self.inimigo.center_y = 150
+
+         self.inimigo.change_x = 3
+         self.inimigo.change_y = 3
+
+         self.sprite_inimigos.append(self.inimigo)
+
+          # Inimigo Especial
+
+         self.inimigo_especial = InimigoEspecial()
+
+         self.inimigo_especial.center_x = 650
+         self.inimigo_especial.center_y = 450
+
+         self.inimigo_especial.change_x = 5
+         self.inimigo_especial.change_y = 5
+
+         self.sprite_inimigos.append(self.inimigo_especial)
 
      # Desenhar coisas na tela
      def on_draw(self):
