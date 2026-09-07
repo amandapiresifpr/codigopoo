@@ -5,9 +5,9 @@ jogadores = []  #lista que armazena todos os jogadores
 equipes = []  # lista que armazena todas as equipes
 
 while True:  #repeticao faz o menu rodar
-    print("========================================")
+    print("....................................")
     print(" CAMPEONATO INTERCLASSE DE E-SPORTS ")
-    print("========================================")
+    print("....................................")
     print("1. Cadastrar jogador")
     print("2. Cadastrar equipe")
     print("3. Adicionar jogador a uma equipe")
@@ -15,7 +15,7 @@ while True:  #repeticao faz o menu rodar
     print("5. Listar jogadores de uma equipe")
     print("6. Buscar jogador por nickname")
     print("0. Sair")
-    print("========================================")
+    print("....................................")
 
     op = input("Escolha uma opção: ")  # le  opção digitada pelo usuário
 
@@ -51,8 +51,8 @@ while True:  #repeticao faz o menu rodar
         print("Adicionado!")  
 
     elif op == "4":
-        for e in equipes:  # percorre todas as equipes
-            print(e, "| Jogadores:", len(e.jogadores))  # mostra equipe e quantidade de jogadores
+        for e in equipes:  # percorre as equipes
+            print(e, "| Jogadores:", len(e.jogadores))  #exibe equipe e qntd de jogadores
 
     elif op == "5":
         i = 0
