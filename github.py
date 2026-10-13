@@ -2,22 +2,18 @@ import os
 
 print("Configurando email...✅")
 email = "20241pvai0030034@estudantes.ifpr.edu.br"
-comando_email = 'git config user.email \"{email} "'
-os.system(comando_email)
+os.system(f'git config user.email "{email}"')
 
 print("Adicionando modificações...✅")
-comando1 = "git add *"
-os.system(comando1)
+os.system("git add .")
 
 mensagem = input("Mensagem do commit: ")
-while(len(mensagem) < 4 ):
+while len(mensagem) < 4:
     print("😢 Mensagem muito pequena, detalhe mais")
-    mensagem = input("DIigite novamente 😘")
+    mensagem = input("Digite novamente 😘: ")
 
 print("Registrando alterações...✅")
-comando2 = f'git commit -m "{mensagem}"'
-os.system(comando2)
+os.system(f'git commit -m "{mensagem}"')
 
 print("Enviando alterações...✅")
-comando3 = "git push"
-os.system(comando3)
+os.system("git push")
